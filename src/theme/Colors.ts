@@ -13,7 +13,7 @@ export const DARK_THEME: Theme = Object.freeze({
   container: '#101020',
   border: '#191928',
   title: '#FFFFFF',
-  text: '#1B1414',
+  text: '#A7A7A7',
   primary: '#9440FF',
   secondary: '#00D5FF',
   ...STATUS_COLORS,

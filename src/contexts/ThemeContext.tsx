@@ -13,7 +13,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import {
   useFonts,
   Poppins_400Regular,
-  Poppins_500Medium,
+  Poppins_600SemiBold,
   Poppins_700Bold,
 } from '@expo-google-fonts/poppins';
 
@@ -47,7 +47,7 @@ const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
-    Poppins_500Medium,
+    Poppins_600SemiBold,
     Poppins_700Bold,
   });
 
@@ -60,7 +60,7 @@ const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   }, [fontsLoaded, user]);
 
   const useDeviceTheme = () => {
-    setTheme(systemTheme === ThemeSchemes.Dark ? DARK_THEME : LIGHT_THEME);
+    setTheme(DARK_THEME);
   };
 
   const useStoredTheme = async () => {

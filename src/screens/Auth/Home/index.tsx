@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import Constants from 'expo-constants';
 
-import { Button, Scrollable, Text, Wrapper } from '@/components';
+import { Box, Button, Scrollable, Text, Wrapper } from '@/components';
 
 import { ThemeContext } from '@/contexts/ThemeContext';
 import { useUser } from '@/contexts/UserContext';
@@ -16,32 +16,19 @@ export default function Home({ navigation }: HomeScreenProps) {
   const { toggle } = useContext(ThemeContext);
   const { logout } = useUser();
 
-  const onCheckAllArticles = () => {
-    navigation.navigate('Articles');
-  };
-
   return (
-    <Wrapper style={{ paddingTop: 0 }}>
+    <Wrapper style={{ paddingTop: 0, paddingHorizontal: 24 }}>
       <Scrollable
         mainNavigation
         paddingTop={Constants.statusBarHeight + 12}
         paddingBottom={BOTTOM_TAB_ITEM_SIZE + 120}
       >
-        <Text>Home</Text>
+        <Box alignItemsCenter style={{ marginBottom: 24 }}>
+          <Text>Home</Text>
+        </Box>
 
-        <Button
-          text="Ver tudo"
-          icon="arrow-right"
-          primary
-          containerStyle={{
-            backgroundColor: 'transparent',
-            padding: 0,
-            height: 24,
-            width: 'auto',
-          }}
-          textStyle={{ fontSize: FONT_SIZE.Small }}
-          onPress={onCheckAllArticles}
-        />
+        <Button text="Sair" primary onPress={logout} style={{ marginBottom: 16 }} />
+        <Button text="Toggle" primary onPress={toggle} />
       </Scrollable>
     </Wrapper>
   );

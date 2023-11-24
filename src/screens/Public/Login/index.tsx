@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from 'styled-components/native';
 
-import { Box, Button, Greenhive, Input, Text, Wrapper } from '@/components';
+import { Box, Button, Input, Maslow, Text, Wrapper } from '@/components';
 import { useUser } from '@/contexts/UserContext';
 import { UserService } from '@/services';
 import { showToast } from '@/utils/utilities';
@@ -38,7 +38,7 @@ export default function Login({ navigation }: LoginScreenProps) {
     <Wrapper>
       <Box style={{ flex: 1 }} alignItemsCenter justifyContentCenter>
         <Logo>
-          <Greenhive.Icon size={60} color={theme.title} />
+          <Maslow.Icon size={60} color={theme.title} />
         </Logo>
 
         <Form>

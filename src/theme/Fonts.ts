@@ -8,6 +8,6 @@ export enum FONT_SIZE {
 
 export enum FONT_FAMILY {
   Regular = 'Poppins_400Regular',
-  SemiBold = 'Poppins_600Medium',
+  SemiBold = 'Poppins_600SemiBold',
   Bold = 'Poppins_700Bold',
 }

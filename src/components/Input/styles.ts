@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import MaskInput from 'react-native-mask-input';
 import chroma from 'chroma-js';
 
 import { FONT_FAMILY, FONT_SIZE } from '@/theme';
@@ -8,6 +7,7 @@ import Box from '../Box';
 import Text from '../Text';
 
 import { InputProps } from './types';
+import { TextInput } from 'react-native';
 
 export const Label = styled.Text<InputProps>`
   margin-bottom: 8px;
@@ -32,7 +32,7 @@ export const InputContainer = styled(Box)<InputProps>`
   border-radius: 8px;
 `;
 
-export const InputText = styled(MaskInput).attrs<InputProps>(({ theme }) => ({
+export const InputText = styled(TextInput).attrs<InputProps>(({ theme }) => ({
   placeholderTextColor: chroma(theme.text).alpha(0.2).hex(),
 }))`
   justify-content: center;

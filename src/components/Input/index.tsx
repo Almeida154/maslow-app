@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ActivityIndicator, Text, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, TouchableOpacity } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';

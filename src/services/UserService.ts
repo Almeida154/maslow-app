@@ -7,15 +7,14 @@ export interface LoginPayload {
 }
 
 export interface CreatePayload {
+  id?: number;
+  password: string;
   name: string;
   email: string;
-  password: string;
-  username: string;
-  hero_id: string;
 }
 
 export type TUser = {
-  id: number;
+  id?: number;
   password: string;
   name: string;
   email: string;
