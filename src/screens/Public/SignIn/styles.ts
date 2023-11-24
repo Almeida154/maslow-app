@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { Box } from '@/components';
+import { GLOBAL_METRICS } from '@/theme';
 
 export const Content = styled(Box)`
-  padding: 32px 0;
-  padding-bottom: 40px;
   flex: 1;
+  padding: 0 ${GLOBAL_METRICS.horizontalSpacing}px;
 `;

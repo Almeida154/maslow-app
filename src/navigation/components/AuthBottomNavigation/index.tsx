@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import {
   createBottomTabNavigator,
   BottomTabNavigationOptions,
@@ -14,7 +15,6 @@ const Tab = createBottomTabNavigator<AuthStackParamList>();
 import useBottomTabStyles, { BlurWrapper, CommonWrapper } from './styles';
 
 import TabBarItem from '../TabBarItem';
-import { Platform } from 'react-native';
 
 const AuthBottomNavigation: React.FC = () => {
   const bottomTabStyles = useBottomTabStyles();

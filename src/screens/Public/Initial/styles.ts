@@ -1,12 +1,12 @@
 import styled from 'styled-components/native';
 
-import { FONT_FAMILY, GLOBAL_METRICS } from '@/theme';
+import { DEVICE_DIMENSIONS, FONT_FAMILY, GLOBAL_METRICS } from '@/theme';
+import { Image } from 'expo-image';
 
 export const Logo = styled.View`
-  flex: 1;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  margin-top: 16px;
 `;
 
 export const Form = styled.View`
@@ -25,4 +25,10 @@ export const PasswordLink = styled(Link)`
   font-family: ${FONT_FAMILY.Regular};
   align-self: flex-end;
   margin-top: 16px;
+`;
+
+export const BackgroundImage = styled(Image)`
+  width: 100%;
+  height: ${`${DEVICE_DIMENSIONS.height}px`};
+  position: absolute;
 `;

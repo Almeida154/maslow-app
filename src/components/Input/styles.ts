@@ -29,7 +29,7 @@ export const InputContainer = styled(Box)<InputProps>`
           : chroma(theme.success).alpha(0.3).hex();
       return theme.border;
     }};
-  border-radius: 8px;
+  border-radius: 16px;
 `;
 
 export const InputText = styled(TextInput).attrs<InputProps>(({ theme }) => ({
